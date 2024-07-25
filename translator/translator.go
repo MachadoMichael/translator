@@ -8,7 +8,7 @@ import (
 	"strings"
 )
 
-func Translater(txt string, sl string, tl string) {
+func Translate(txt string, sl string, tl string) (string, error) {
 	txt = strings.Replace(txt, " ", "%20", -1)
 	url := "https://translate.googleapis.com/translate_a/single?client=gtx&sl=" + sl + "&tl=" + tl + "&dt=t&q=" + txt
 
@@ -28,9 +28,9 @@ func Translater(txt string, sl string, tl string) {
 	err = json.Unmarshal(body, &result)
 	if err != nil {
 		fmt.Println("Error:", err)
-		return
+		return "", err
 	}
 
 	str := strings.Split(string(body), "\"")
-	fmt.Println(str[1])
+	return str[1], nil
 }
