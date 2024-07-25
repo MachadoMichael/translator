@@ -1,5 +1,3 @@
-# translator
-
 > ### Package `translator`
 > 
 > The `translator` package provides a function to translate text from one language to another using the Google Translate API.
