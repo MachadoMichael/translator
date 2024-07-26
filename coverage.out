@@ -1,0 +1,17 @@
+mode: set
+github.com/MachadoMichael/translator/main.go:10.13,16.58 4 0
+github.com/MachadoMichael/translator/main.go:16.58,18.3 1 0
+github.com/MachadoMichael/translator/handler/translate.go:13.56,14.33 1 1
+github.com/MachadoMichael/translator/handler/translate.go:14.33,17.3 2 1
+github.com/MachadoMichael/translator/handler/translate.go:19.2,21.49 3 1
+github.com/MachadoMichael/translator/handler/translate.go:21.49,24.3 2 0
+github.com/MachadoMichael/translator/handler/translate.go:26.2,29.16 3 1
+github.com/MachadoMichael/translator/handler/translate.go:29.16,32.3 2 0
+github.com/MachadoMichael/translator/handler/translate.go:34.2,35.29 2 1
+github.com/MachadoMichael/translator/service/google.go:13.64,18.16 4 1
+github.com/MachadoMichael/translator/service/google.go:18.16,20.3 1 0
+github.com/MachadoMichael/translator/service/google.go:22.2,23.16 2 1
+github.com/MachadoMichael/translator/service/google.go:23.16,25.3 1 0
+github.com/MachadoMichael/translator/service/google.go:27.2,31.16 4 1
+github.com/MachadoMichael/translator/service/google.go:31.16,34.3 2 0
+github.com/MachadoMichael/translator/service/google.go:36.2,37.20 2 1

@@ -8,7 +8,6 @@ import (
 )
 
 func TestGoogleTranslate(t *testing.T) {
-
 	ti := model.TranslationInfo{
 		Text: "Hello",
 		SL:   "en",
