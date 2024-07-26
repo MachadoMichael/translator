@@ -1,4 +1,4 @@
-package translator
+package service
 
 import (
 	"encoding/json"
@@ -6,11 +6,13 @@ import (
 	"io"
 	"net/http"
 	"strings"
+
+	"github.com/MachadoMichael/translator/model"
 )
 
-func Translate(txt string, sl string, tl string) (string, error) {
-	txt = strings.Replace(txt, " ", "%20", -1)
-	url := "https://translate.googleapis.com/translate_a/single?client=gtx&sl=" + sl + "&tl=" + tl + "&dt=t&q=" + txt
+func GoogleTranslate(ti model.TranslationInfo) (string, error) {
+	txt := strings.Replace(ti.Text, " ", "%20", -1)
+	url := "https://translate.googleapis.com/translate_a/single?client=gtx&sl=" + ti.SL + "&tl=" + ti.TL + "&dt=t&q=" + txt
 
 	res, err := http.Get(url)
 	if err != nil {
