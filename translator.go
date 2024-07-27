@@ -8,9 +8,15 @@ import (
 	"strings"
 )
 
-func Translate(txt string, sl string, tl string) (string, error) {
-	txt = strings.Replace(txt, " ", "%20", -1)
-	url := "https://translate.googleapis.com/translate_a/single?client=gtx&sl=" + sl + "&tl=" + tl + "&dt=t&q=" + txt
+type TranslationInfo struct {
+	Text string `json:"text"`
+	SL   string `json:"sl"`
+	TL   string `json:"tl"`
+}
+
+func Translate(ti TranslationInfo) (string, error) {
+	txt := strings.Replace(ti.Text, " ", "%20", -1)
+	url := "https://translate.googleapis.com/translate_a/single?client=gtx&sl=" + ti.SL + "&tl=" + ti.TL + "&dt=t&q=" + txt
 
 	res, err := http.Get(url)
 	if err != nil {
